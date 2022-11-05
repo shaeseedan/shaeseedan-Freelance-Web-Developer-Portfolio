@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Code Pro|Homemade Apple|Montserrat Alternates|Monofett">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+    <script src="/js/main.js"></script>
+    <title>Shae Seedan Freelance Web Developer Portfolio</title>
+</head>
+  <body>
+      <!--Initialize AOS Library-->
+      <script>
+        AOS.init();
+      </script>
+
+      <!--nav bar-->
+          <input type="checkbox" name="" id="nav-toggler" class="fas fa-bars">
+          <nav class="navbar">
+            <a href="./index.html">home</a>
+            <a href="./Pages/about(Shae).html">about(Shae)</a>
+            <a href="./Pages/contact(me).html">contact(me)</a>
+            <a href="./Pages/websites(.plans).html">websites(.plans)</a>
+            <a href="./Pages/customer(.reviews).html">customer(.reviews)</a>
+            <div class="background-image"></div>
+          </nav>
+          
+          <!--Preloader-->
+          <div class="preloader">
+            <div class="counter">0</div>
+          </div>
+
+          <script>
+            function counter() {
+              var count = setInterval(function() {
+                var c = parseInt($('.counter').text());
+                $('.counter').text((++c).toString());
+                if (c == 100){
+                  clearInterval(count);
+                  $('.counter').addClass('hide')
+                  $('.preloader').addClass('active')
+                }
+              },60)
+            }
+            counter()
+          </script>
+          
+          <!--Sections-->
+          <div class="container">
+            <section class="model-viewer-index">
+                  <model-viewer class="model-viewer-for-index"
+                  src="/blender 3D render/finalhouse.glb"
+                  camera-controls
+                  disable-zoom src="/blender 3D render/finalhouse.glb"
+                  touch-action="pan-y"
+                  camera-controls poster="poster.webp"
+                  shadow-intensity="1"
+                  camera-orbit="0deg 0deg auto"
+                  min-camera-orbit="-115deg 115deg auto"
+                  max-camera-orbit="-47deg 89deg auto"
+                  oncontextmenu="return false;">
+                  <div class="progress-bar hide" slot="progress-bar"></div>
+                  </model-viewer>
+
+              <model-viewer id="model-viewer-for-index" camera-controls touch-action="pan-y" 
+                camera-orbit="calc(-2.3rad + env(window-scroll-y) * 4rad) 
+                calc(90deg + env(window-scroll-y) * 180deg) 
+                calc(5m - env(window-scroll-y) * 10m)" 
+                src="/blender 3D render/finalhouse.glb" 
+                disable-zoom src="/blender 3D render/finalhouse.glb"
+                alt="A blender house">
+                <button class="Hotspot" slot="hotspot-1" data-position="12.777229045357144m 5.745999032597976m 21.82843653618975m" data-normal="-1m 0m 0m" data-visibility-attribute="visible">
+                  <div class="HotspotAnnotation">This is where it all began... home.</div>
+              </button>
+              </model-viewer>
+            </section>
+
+            <section class="home">
+              <!--Home page-->
+                <div class="home-text">
+                  <h4>html</h4>
+                  <br>
+                  <h4>body</h4>
+                  <h4>h1</h4>
+                  <h1>Hi,<br>I'm <span class="S">S</span>hae,<br></h1>
+                  <h1>a web developer</h1>
+                  <h4>/h1</h4>
+                  <br>
+                  <h4>h3</h4>
+                  <h3>Freelance Web Developer / Creative Artist</h3>
+                  <h4>/h3</h4>
+                </div>
+
+              <div class="aos-retro-computer" data-aos="fade-up-left" data-aos-duration="1500">
+                <img class="retro" src="/Pictures/Computer-peripherals.png">
+              </div>
+
+              <div class="about-watermark">
+                <h1 class="watermark">ABOUT//</h1>
+              </div>
+            </section>
+
+           <section class="about-me">
+                <!--About Me page-->
+                
+                <div class="About-Me">
+                  <div class="about-text">
+                  <h4>h2</h4>
+                  <h2>about(Shae)</h2>
+                  <h4>/h2</h4>
+                  <br>
+                  <h4>p</h4>
+                  <p>I'm a Backend developer who's led by God. My Journey towards Web Design was initialized July 2022, when I decided to pursue a BsC in Information Technology. As a young individual, who's now finished writing CXC O-Levels, i was required to have more I.T. experience in order to apply for my degree, After thorough conversations with CTS college, it was recommended to undergo at least two of their short courses, to be acknowledged as more experience within the I.T. field. The Web Design and CompTIA A+ courses were the two programs which I chose.
+                    <br>
+                    <br>
+                    At first Web design was not an interest of mine, however as the course progressed, i developed a passion for design and ventured into 3D rendering using a program called Blender. Growing up, I was always taught to be ambitious and to never give up, since I know that God has my back. I hope to become an I.T. professional in the future and web design is such a valuable asset to my skillset, which I look forward to ever-improving and learning from others.
+                  </p>
+                  <h4>/p</h4>
+                  </div>
+
+                  <div class="about-model">
+                    <model-viewer class="model-viewer" src="/blender 3D render/finalroom.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" camera-orbit="-106.8deg 77.31deg auto">
+                      <button class="Hotspot" slot="hotspot-1" data-position="15.126655556685217m 3.114937589323099m 25.62420836022386m" data-normal="1.1920929043895893e-7m 2.980232505223011e-8m -0.9999999999999925m" data-visibility-attribute="visible">
+                          <div class="HotspotAnnotation">My Passion</div>
+                      </button><button class="Hotspot" slot="hotspot-2" data-position="18.82494729012251m 4.091103308194374m 21.095169182565638m" data-normal="-1m 0m 0m" data-visibility-attribute="visible">
+                          <div class="HotspotAnnotation">My Favourite Shows</div>
+                      </button><button class="Hotspot" slot="hotspot-3" data-position="18.633168972815938m 1.4326337747785303m 19.991285185799846m" data-normal="8.838654187863933e-8m 0.9999999999999489m 3.0727228516375926e-7m" data-visibility-attribute="visible">
+                          <div class="HotspotAnnotation">My favourite novels</div>
+                      </button>
+                      <div class="progress-bar hide" slot="progress-bar">
+                          <div class="update-bar"></div>
+                      </div>
+                  </model-viewer>
+                </div>
+                <div class="aos-coffee" data-aos="fade-up-right" data-aos-duration="2000">
+                  <img class="coffee" src="/Pictures/particle.png">
+                </div>
+                
+              <div class="work-watermark">
+                <h1 class="watermark">WORK//</h1>
+              </div>
+            </section>
+
+            <section class="contact">
+              <div class="contact-text">
+                <h4>h2</h4>
+                <h2>contact(me)</h2>
+                <h4>/h2</h4>
+                <br>
+                <h4>p</h4>
+                <p>Hi there, yes you! I'm interested in freelance opportunities, especially ambitious projects. If you are interested in my work, don't hesitate to use the form.
+                </p>
+                <h4>/p</h4>
+                <br>
+              </div>
+
+              <div class="contact-in">
+                <div class="contact-map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62843.924014888486!2d-61.54951988232385!3d10.119926345519094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c358549600ee35f%3A0x168bd2670edbaabd!2sSiparia!5e0!3m2!1sen!2stt!4v1667594118912!5m2!1sen!2stt" 
+                  width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-form">
+                <h2>.(details)</h2>
+                <form action="https://formsubmit.co/shaeseedan2005@gmail.com" method="POST">
+                  <input type="text" placeholder="Name" class="contact-form-txt" required>
+                  <input type="text" placeholder="Email" class="contact-form-txt" required>
+                  <input type="text" placeholder="Phone" class="contact-form-txt" required>
+                  <input type="text" placeholder="Subject" class="contact-form-txt" required>
+                  <textarea placeholder="Message" class="contact-form-textarea" required></textarea>
+                  <input type="submit" name="Submit" class="contact-form-btn">
+                </form>
+                </div>
+              </div>
+
+              <div class="aos-music" data-aos="fade-up-left" data-aos-duration="2800">
+                <img class="music" src="/Pictures/Coffee and earbuds.png">
+              </div>
+
+              <div class="plans-watermark">
+                <h1 class="watermark">PLANS//</h1>
+              </div>
+            </section>
+
+            <section class="website-plans-section">
+              <!--Website Plans page-->
+
+              <div class="Website-Plans">
+                <div class="plans-text">
+                   <h4>h1</h4>
+                  <h2>website(.plans)</h2>
+                  <h4>/h1</h4>
+
+              <header>
+                <div class="toggle">
+                  <label>Annually</label>
+                  <div class="toggle-btn">
+                    <input type="checkbox" class="checkbox" id="checkbox"/>
+                    <label class="sub" id="sub" for="checkbox">
+                      <div class="circle"></div>
+                    </label>
+                  </div>
+                  <label>Monthly</label>
+                </div>
+              </header>
+              </div>
+
+              <div class="cards">
+                <div class="card shadow">
+                  <ul>
+                    <li class="pack">Basic</li>
+                    <li id="basic" class="price bottom-bar">&dollar;1200.00</li>
+                    <li class="bottom-bar">Limited 5 Pages</li>
+                    <li class="bottom-bar">2 Users Allowed</li>
+                    <li class="bottom-bar">No Animation</li>
+                    <li><a class="btn" href="/Pages/Checkout.html">Learn More</a></li>
+                  </ul>
+                </div>
+                
+                <div class="card active">
+                  <ul>
+                    <li class="pack">Professional</li>
+                    <li id="professional" class="price bottom-bar">&dollar;2800.00</li>
+                    <li class="bottom-bar">Unlimited Pages</li>
+                    <li class="bottom-bar">10 Users Allowed</li>
+                    <li class="bottom-bar">3D Web Model</li>
+                    <li><a class="btn" href="/Pages/Checkout2.html">Learn More</a></li>
+                  </ul>
+                </div>
+                <div class="card shadow">
+                  <ul>
+                    <li class="pack">Intermediate</li>
+                    <li id="intermediate" class="price bottom-bar">&dollar;1900.00</li>
+                    <li class="bottom-bar">15 Pages</li>
+                    <li class="bottom-bar">5 Users Allowed</li>
+                    <li class="bottom-bar">2D Animations</li>
+                    <li><a class="btn" href="/Pages/Checkout3.html">Learn More</a></li>
+                  </ul>
+                </div>
+              </div>
+          
+                    <script>
+                
+                      const checkbox = document.getElementById("checkbox");
+                      const professional = document.getElementById("professional");
+                      const master = document.getElementById("intermediate");
+                      const basic = document.getElementById("basic");
+                
+                      checkbox.addEventListener("click", () => {
+                        basic.textContent = basic.textContent === "$1200.00" ? "$120.00" : "$1200.00";
+                        professional.textContent =
+                          professional.textContent === "$2800.00" ? "$280.00" : "$2800.00";
+                        intermediate.textContent = intermediate.textContent === "$1900.00" ? "$190.00" : "$1900.00";
+                      });
+                
+                    </script>
+
+                <div class="aos-watch">
+                  <img class="watch" src="/Pictures/watch.png">
+                </div>
+                <div class="aos-phone">
+                  <img class="phone" src="/Pictures/Phone.png">
+                </div>
+                <div class="aos-keyboard">
+                  <img class="keyboard" src="/Pictures/Keyboard.png">
+                </div>
+                <div class="aos-controller">
+                  <img class="controller" src="/Pictures/controller.png">
+                </div>
+
+
+               <div class="aos-shoes" data-aos="fade-up-right" data-aos-duration="2800">
+                <img class="shoes" src="/Pictures/shoes.png">
+              </div>
+
+              <div class="footer">
+                <h2>Made with ♥ in 2022//</h2>
+                <br>
+                  <div class="row">
+                    <div class="column">
+                      <h3>(<>)</h3>
+                      <br>
+                      <h3>Html <br> CSS <br> Javascript <br> Model-Viewer <br> Node.js</h3>
+                    </div>
+                    <div class="column">
+                      <h3>[other]</h3>
+                      <br>
+                      <h3>Lots of Coffee <br> Lots of references</h3>
+                    </div>
+                    <div class="column">
+                      <h3>/(music)</h3>
+                      <br>
+                      <h3>presents by Bryson Tiller(feat. Kiana Lede)</h3>
+                    </div>
+                </div>
+              </div>
+              </div>
+            </section>
+          </div>
+        </body>
+      </html>
